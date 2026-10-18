@@ -1050,7 +1050,7 @@ h2 em {
     font-size: 20px;
 }
 
-/* map */
+/* map (Google Maps embed) */
 
 .map-card {
     position: relative;
@@ -1064,60 +1064,14 @@ h2 em {
     box-shadow: var(--shadow);
 }
 
-.map-card img {
+.map-card iframe {
+    position: absolute;
+    inset: 0;
+
     width: 100%;
     height: 100%;
-    min-height: 430px;
-
+    border: 0;
     display: block;
-    object-fit: cover;
-    object-position: center;
-
-    transition: transform 0.5s ease;
-}
-
-.map-card:hover img {
-    transform: scale(1.03);
-}
-
-.map-label {
-    position: absolute;
-    left: 24px;
-    bottom: 24px;
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    padding: 13px 18px;
-    border-radius: 18px;
-
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 10px 30px rgba(17, 31, 47, 0.16);
-}
-
-.map-label strong {
-    display: block;
-    color: var(--navy);
-    font-size: 15px;
-    line-height: 1.2;
-}
-
-.map-label small {
-    display: block;
-    margin-top: 2px;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.map-dot {
-    width: 12px;
-    height: 12px;
-    flex: 0 0 12px;
-
-    border-radius: 50%;
-    background: var(--orange);
-    box-shadow: 0 0 0 6px rgba(239, 118, 82, 0.2);
 }
 
 
@@ -1359,9 +1313,7 @@ footer .logo small {
 
     .menu-grid { grid-template-columns: 1fr; }
 
-    .map-card { min-height: 320px; border-radius: 26px; }
-    .map-card img { min-height: 320px; }
-    .map-label { left: 18px; bottom: 18px; }
+    .map-card { min-height: 340px; border-radius: 26px; }
 
     .footer-top {
         flex-direction: column;
